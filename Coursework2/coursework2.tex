@@ -1,0 +1,141 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{fontspec}
+\setlength{\oddsidemargin}{5mm}			% Remove 'twosided' indentation
+\setlength{\evensidemargin}{5mm}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{graphicx}
+
+\begin{document}
+
+\begin{titlepage}
+
+% defines new rule for horizoontal lines & thickness
+ \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+ 
+ \center % center everything
+ 
+ \textsc{\LARGE Loughborough University}\\[1.5cm]
+ 
+ \textsc{\Large COP500}\\[0.5cm]
+ 
+ \textsc{\large Research Methods}\\[0.5cm]
+ 
+\HRule\\[0.4cm]
+
+ {\huge Paper Evaluation}\\[0.4cm]
+
+\HRule\\[1.5cm]
+
+\begin{minipage}{0.4\textwidth}
+ \begin{center}
+   \large
+   \textit{Author}: \textsc{Ekow Mensah (B717426)}
+ \end{center}
+ \end{minipage}
+
+\vfill\vfill
+
+\includegraphics[width=0.7\textwidth]{logo.png}\\[1cm]
+
+\vfill\vfill\vfill
+{\large\today}
+
+ 
+\end{titlepage}
+ 
+\newpage
+
+\section{Introduction}
+
+\onehalfspacing
+
+Simultaneous Localisation and Mapping is a field of robotics which studies how a mobile robot can concurrently build a world model of its environment while accurately determining its position within its environment as explained in the coursework 1 document. SLAM has been extensively researched over the past two decades with a vast variety of approaches to solving the SLAM problem. Grisetti et al (2010) classify the SLAM approaches into two separate categories. Filtering approaches and Smoothing approaches. Filtering approaches represent the problem as a real-time state estimation where a state is made up of the world model of the robot and the current position of the robot in the map. Examples of such approaches are the Extended Kalman Filter (EKF) and Information filters. On the other hand, smoothing approaches attempt to approximate the path of the robot based on a complete set of measurements. This is achieved by using least square error optimisation techniques. Furthermore, after more research over the years, newer techniques such as the use of genetic algorithms and artificial intelligence have been used to produce solutions to the SLAM problem. Graph-SLAM is an approach which attempts to solve simultaneous localisation and mapping by representing the world space into a graph where landmarks or robot poses are represented as nodes on the graph. Moreover, boundaries between nodes generate sensor readings which restrict connected poses (Grisetti et al, 2010). After the generation of the graph, a challenging problem is to ensure that the generated graph is consistent with the actual world that is, landmark positions on the generated graph must correspond to landmark positions in the environment. To solve this problem, raw measurement are substituted with edges within the graph. These edges are referred to as virtual measurements. Edges located in between two nodes are given a probability distribution over the respective positions of the two poses (Grisetti et al, 2010). Examples of applications of graph-SLAM are two dimensional laser based mapping and three dimensional laser based mapping.
+
+\parskip=0.2in
+Path planning is that aspect of robotics which focuses on determining the best path to a goal or destination. Path planning relates to SLAM in that, it helps with the localisation and mapping by making it possible to recognise specific locations that have been visited. Path planning can be grouped into two segments that is (global path planning and local path planning). The aim of global path planning is to find a collision free path to the goal. The path for which the robot must move is determined by transforming the world into a configuration space where all possible configurations of the robot are indicated (Buniyamin et al, 2011). The configuration space is then modelled into a graph which represents connectivity of nodes in the free space (world). Conversely, local path planning is concerned with real time obstacle avoidance within an unknown environment. It makes use of a reactive approach because actions are determined by sensory information obtained from the environment (Buniyamin et al, 2011). Usually both approaches are used to solve path planning problems related to SLAM.
+ 
+In this evaluation report two papers related to the field of SLAM are critically evaluated. These papers are: 
+
+\begin{itemize}
+ \item{Mapping forests using an unmanned ground vehicle with 3D LiDAR and graph-SLAM (Pierzchała et al., 2018)}
+ \item{Optimal Robot Path Planning System by Using a Neural Network-Based Approach (Chen and Chiu, 2016)}
+\end{itemize}
+
+ Pierzchała et al., (2018) propose a solution to mapping forest environment using graph-SLAM and information from a 3D LiDAR. The 3D LiDAR is used to generate a 3D point cloud image where the obtained map was assessed for its accuracy and precision. Chen and Chiu (2016) suggest a solution to robot path planning using a neural network based approach. According to the authors, the suggested approach is capable of constructing maps of the environment and planning the best path. A grid based map is generated using information from stationary obstacles and an origin. A neural network is used to control the movements of the robot and compute the best trajectory. These two papers were chosen in particular because, both papers are current and use a combination of relatively old (graph-SLAM) and novel approaches to solve SLAM related problems. Futhermore, SLAM is a very broad research area with a wide range of solutions to problems, however, these two papers address newer issues which have been discovered within the research space. 
+
+\newpage 
+\section{Critique of Pierzchała et al., 2018}
+
+\subsection{Introduction}
+In the introduction, a good review of methods used to obtain information about forests (i.e. terrestrial laser scans and aerial laser scans) is given and this provides a coherent build up towards the motivation behind the research. Moreover, the authors outline popular approaches and some advantages as well as  challenges with these approaches. This conveys the need for a novel approach capable of solving the problems posed by existing approaches and contributes to the reasons why the research was undertaken. Additionally, the concepts explained in the introduction consecutively lead to the aims and objectives of the research. However, graph-SLAM is an approach that is used in the proposed solution, yet, no comments are made concerning graph SLAM, also, although visual-SLAM is a popular approach, it is relatively unrelated to the research topic, rather graph-SLAM concepts should have been described. Also, the introduction contains an excessive amount of information. Some of the information provided in the introduction could have been placed in the theoretical background.
+
+\subsection{Theoretical Background}
+The second section introduces some theoretical background behind SLAM and graph-SLAM. This should have been done in the introduction with some of the content within in the introduction placed under this section as stated earlier. Apart from this, the description provided for SLAM and graph-SLAM is very brief. More information such as, work related to the use of graph-SLAM for solutions to outdoor SLAM problems could have been given. Nonetheless, references to related research undertaken for unmanned ground vehicles (UGVs) was provided. This is good as SLAM concepts applied to the use of UGVs and forest locations are relevant to the research topic.
+
+\subsection{Materials and Methods}
+The method section is very coherent and explains how each step was carried out in adequate detail. This is very good as other researchers may be able duplicate this approach or learn from the proposed approach. Moreover, each step of the methodology was very relevant to the research topic. Also, an acceptable test area was selected with sources to validate any approaches used to process the generated data. However, the point cloud generation was carried out offline rather than real-time. Although the reason for this is justified, ideal SLAM approaches attempt to generate maps of the environment and perform localisation real-time. This raises questions concerning whether this proposed solution would work efficiently in other forest environments. 
+
+\subsection{Results}
+The results are presented in relatively well with a point cloud image as evidence of the results obtained. Furthermore, the results obtained coincide with the aims and objectives stated in the introduction. Nevertheless, the results section is relatively challenging to understand. The results could have been presented in various forms such as tables or graphs which are more straightforward.
+
+\subsection{Discussion}
+The discussion is much more easier to understand than the results section and provides an interpretation of the results obtained. Furthermore, the results are compared and contrasted with results obtained from previous related studies. Moreover, a good criticism of the approach used was made (for example,  more tests could have been carried out to obtain the effects of vegetation on obtaining quality map data). However, some points made in the discussion section are not covered in the testing section. This may lead to some inconsistencies in arguments presented. 
+
+\subsection{Conclusion}
+A good summary of the research is given based on inferences from the objectives stated in the introduction. Although the research yielded positive results, the authors recognise the need for more research pertaining to SLAM in forest areas influenced by climate changes. However, questions can be raised concerning the usefulness of SLAM for forest environments. Research could be geared towards more useful areas such as driverless cars and autonomous aerial vehicles such as drones.
+
+\section{Critique of Chen and Chiu, 2016}
+
+\subsection{Introduction}
+The authors introduce the topic of path planning decently by explaining both old approaches and newer approaches to path planning including the need for an optimal path planning system. However, the introduction could have been more coherent as the ideas seem to be everywhere. Also, the authors state two proposals of the system being developed which is relatively related, however it is a bit unclear as to what the main idea or concept being proposed. However, the main contributions of the study are explained which informs readers about the outcomes of the research. 
+
+\subsection{Scenario and System Diagram}
+A brief explanation of how the system is designed is provided and unlike the introduction, this section is logical and straightforward. Furthermore, images are used to better convey the scenario to which the optimal path planning is being applied to that is, retrieving and replenishing stock. Moreover, the method used coincides with the objectives stated in the introduction and is suitable for solving a problem of this nature.
+
+
+\subsection{Robot Path Planning Algorithm}
+ This section is also written in some level of depth the mathematics behind the algorithms are explained well and the programmed algorithms are written in pseudo code to aid in the understanding of the algorithm. Additionally, experiments performed are compared with other related work to show that the proposed approach is an improvement of other existing approaches. However, this should have been put in a test section or the result section. 
+
+\subsection{Experimental Result}
+The experimental results section is brief and contains the relevant information pertaining to the results obtained from the experiment. The result obtained is shown in a step-wise manner to convince readers concerning the legitimacy of the proposed solution. However, the results section could have been much deeper for instance, comparing how the robot performs under various lighting conditions as different warehouses or hypermarkets may have varying lighting conditions. Also, the results only show obstacle avoidance and the optimal path for a particular layout. The layout could have been changed to see whether the path that the robot follows is the optimal path. In other words, the article does not provide enough evidence to prove that the proposed solution is functional under varying environmental conditions.  
+
+\subsection{Conclusion}
+The conclusion is short and covers that which has been achieved in relation to the aims and objectives stated in the introduction of the article. Furthermore, a similar scenario is suggested where the proposed solution can be used. However, no future work or suggested further research is provided which depicts the idea that the proposed solution is complete which in fact, it is not. The reason being that, it has not been tested efficiently as there is little or no evidence of stringent testing under different environmental conditions. A suggestion would be to carry out further research to develop an actual robot in a warehouse setting capable of performing optimal path planning based on the proposed technique.
+
+\section{Compare and contrast the two papers}
+
+\subsection{Introductions}
+Both papers include an introduction which provides an idea of what the proposed solution is and the motivation behind the research undertaken. The first paper that is (Pierzchała et al., 2018)  provides a very detailed introduction and a coherent explanation of the reasons for the research. The second paper that is (Chen and Chiu, 2016) provides a brief introduction with some explanation of the old and new approaches used for path planning, however, it lacks the coherency displayed in the first paper. Nonetheless, one may argue that the introduction provided in the first paper is lengthy and that content should be split between the introduction and theoretical background. Furthermore, whereas the introduction in the second paper contains the relevant information, the introduction the first paper includes information relevant to simultaneous localisation and mapping but not relevant to the research topic.
+
+\subsection{Background} 
+The first paper provides some theoretical background to help put the concepts being discussed into context. However, the information provided is very brief and could have been more in depth as explained earlier in section 2.2 above. The second paper does not provide a background at all. This could be because, the authors assume that readers already have knowledge of the research area, nonetheless, a background section explaining the context of the concepts would be very helpful.
+
+\subsection{ Methodology}
+The first paper provides a comprehensive explanation of the development of the proposed solution. Each section contains enough information to enable duplication of the method. This can also be said for the second paper, however the difference is that the second paper divides the methodology into two separate sections. The first paper tackles a more sophisticated problem and therefore, the level of detail required may be greater than that of the second paper.
+
+\subsection{Results}
+With both papers, the results provided coincide with the objectives stated in the introduction, in spite of that, with the first paper, although the section contains the relevant information, the information could have been conveyed in different ways which makes it simpler to understand. The second paper on the other hand, has a brief results section with images showing the results of each stage of the experiment that is, planning the path and ensuring that the robot follows the planned path while avoiding obstacles. However, the second paper does not provide enough evidence to ascertain the robustness of the proposed solution.
+
+\subsection{ Article Conclusions}
+Both conclusions are brief summaries of the proposed solution relative to the objectives stated. The first paper mentions the success of the research and acknowledges the need for further research in order to make the solution more robust. On the other hand, the second paper assumes that the solution is perfect and does not suggest any further work or further research that could be done to make the algorithm more efficient.
+\newpage
+
+\subsection{Conclusions}
+\section{Reference List}
+
+Buniyamin N., Sariff N., Wan Ngah W.A.J., Mohamad Z. (2011) Robot global path planning overview and a variation of ant colony system algorithm, \textit{International Journal Of Mathematics And Computers In Simulation},
+5(1), pp 10-16. Available at: \url{https://pdfs.semanticscholar.org/4c53/70100a2ac53562d13c0ac61466edf1d213ea.pdf} (Accessed: 8th March 2018).   
+
+G. Grisetti, R. Kümmerle, C. Stachniss, and W. Burgard, “A tutorial
+on graph-based SLAM,” IEEE Intell. Transp. Syst. Mag., vol. 2, no. 4,
+pp. 31–43, Winter, 2010
+
+
+
+
+\end{document}
