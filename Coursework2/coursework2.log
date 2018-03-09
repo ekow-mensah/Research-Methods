@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2018.3.6)  9 MAR 2018 09:25
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2018.3.6)  9 MAR 2018 11:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -749,28 +749,38 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 ) [1
 
 ]
-[1] [2] [3] [4] [5] [6] [7] [8]
-Overfull \hbox (39.39114pt too wide) in paragraph at lines 131--133
-[]$[][][][][] [] [] [] [][][][] [] [][][][][][][][][][][][][][][] [] [][][] [] 
-[][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][] []
+(./coursework2.toc)
+\tf@toc=\write4
+\openout4 = `coursework2.toc'.
+
+ [1] [2] [3] [4] [5] [6] [7] [8] [9] [10]
+Overfull \hbox (106.63516pt too wide) in paragraph at lines 143--144
+\TU/lmr/m/n/12 Available at: []$[][][][][] [] [] [] [][][][] [] [][][][][][][][
+][][][][][][][] [] [][][] [] [][][][] [] [][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][] []
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
-[9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
+
+Overfull \hbox (19.30168pt too wide) in paragraph at lines 150--151
+\TU/lmr/m/it/12 ics in Agriculture\TU/lmr/m/n/12 , [online] 145 pp 217-225. Ava
+ilable at: []$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][] []
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
+[11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
  (./coursework2.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 141.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 141.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 155.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 155.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
  ) 
 Here is how much of TeX's memory you used:
- 19019 strings out of 493007
- 363625 string characters out of 6137966
- 467136 words of memory out of 5000000
+ 19022 strings out of 493007
+ 363661 string characters out of 6137966
+ 467214 words of memory out of 5000000
  22898 multiletter control sequences out of 15000+600000
  533496 words of font info for 48 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  39i,4n,45p,10461b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on coursework2.pdf (10 pages).
+Output written on coursework2.pdf (12 pages).
